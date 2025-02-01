@@ -12,7 +12,7 @@ for(i=0;i<size;i++){
 printf("Array is : ");
 for ( i = 0; i < size; i++)
 {
-    printf("%d \n",arr[i]);
+    printf("%d\n",arr[i]);
 }
 
     return 0;
