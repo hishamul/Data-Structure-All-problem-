@@ -16,6 +16,22 @@ while (ptr!=NULL)
     ptr=ptr->link;
 }
 }
+void counts_of_nodes(struct node *head){
+       int count=0;
+        if (head==NULL)
+        printf("Linked is empty");
+        struct node *ptr=NULL;
+        ptr=head;
+        while (ptr!=NULL)
+        {
+            count++;
+         
+            ptr=ptr->link;
+        }
+        printf("%d ",count);
+
+
+}
 int main(){
     struct node *head=malloc(sizeof(struct node));
     head->data=34;
@@ -29,6 +45,6 @@ int main(){
     current->link=NULL;
     head->link->link=current;
     print_data(head);
-    
+    counts_of_nodes(head);
     return 0;
 }
