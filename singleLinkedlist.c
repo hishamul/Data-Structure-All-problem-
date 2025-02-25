@@ -5,7 +5,17 @@ struct node
     int data;
     struct node *link;
 };
-
+void print_data(struct node *head){
+if (head==NULL)
+printf("Linked is empty");
+struct node *ptr=NULL;
+ptr=head;
+while (ptr!=NULL)
+{
+    printf("%d ",ptr->data);
+    ptr=ptr->link;
+}
+}
 int main(){
     struct node *head=malloc(sizeof(struct node));
     head->data=34;
@@ -18,7 +28,7 @@ int main(){
     current->data=76;
     current->link=NULL;
     head->link->link=current;
-    printf("%d",head->link->link->data);
+    print_data(head);
     
     return 0;
 }
